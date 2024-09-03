@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrli Veb Səhifə</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome üçün CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- TODO: Add a favicon to the page -->
+    <link rel="shortcut icon" href="/photos/R.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="photos/logo2.png" alt="Logo" width="200" height="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#mekteb"><i class="fas fa-school me-2"></i>Məktəb</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#muellim"><i class="fas fa-user-tie me-2"></i>Müəllim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#mektebli"><i class="fas fa-user-graduate me-2"></i>Məktəbli</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#elaqe"><i class="fas fa-phone me-2"></i>Əlaqə</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filters">
+            <div class="filter">
+                <h2>MÜTDA</h2>
+                <ul id="mutda-list">
+                    <li>BŞRTİ</li>
+                    <li>LARTİ</li>
+                    <li>GQRTİ</li>
+                    <li>QSRTİ</li>
+                    <li>ŞZRTİ</li>
+                </ul>
+            </div>
+
+            <div class="filter">
+                <h2>Rayon</h2>
+                <ul id="rayon-list">
+                    <li>Bakı</li>
+                    <li>Zaqatala</li>
+                    <li>Şəki</li>
+                    <li>Qax</li>
+                    <li>Balakən</li>
+                </ul>
+            </div>
+
+            <div class="filter">
+                <h2>Təhsil müəssisəsi</h2>
+                <ul id="tehsil-list">
+                    <li>Tala 5</li>
+                    <li>Muxax 1</li>
+                    <li>Litsey</li>
+                    <li>Gimnaziyə</li>
+                    <li>Ev</li>
+                </ul>
+            </div>
+
+            <div class="filter">
+                <h2>Top - 10</h2>
+                <ul id="top10-list">
+                    <li>Müəllim</li>
+                    <li>Məktəb</li>
+                    <li>Şagird</li>
+                    <li>Direktor</li>
+                    <li>Müavin</li>
+                </ul>
+                <canvas id="top10-chart"></canvas>
+            </div>
+        </section>
+    </main>
+    <div class="container">
+        <h1>Employee Directory</h1>
+        
+        <div class="filters">
+            <select id="genderFilter">
+                <option value="">Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+            <select id="departmentFilter">
+                <option value="">Department</option>
+                <option value="RnD">RnD</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Design">Design</option>
+                <option value="Support">Support</option>
+            </select>
+            <select id="statusFilter">
+                <option value="">Status</option>
+                <option value="Online">Online</option>
+                <option value="On Leave">On Leave</option>
+                <option value="Terminated">Terminated</option>
+            </select>
+            <select id="officeFilter">
+                <option value="">Office</option>
+                <option value="Site 1">Site 1</option>
+                <option value="Site 2">Site 2</option>
+                <option value="Site 3">Site 3</option>
+            </select>
+        </div>
+
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Office</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>M</td>
+                    <td>RnD</td>
+                    <td>Online</td>
+                    <td>Site 1</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>M</td>
+                    <td>RnD</td>
+                    <td>On Leave</td>
+                    <td>Site 1</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>F</td>
+                    <td>RnD</td>
+                    <td>Online</td>
+                    <td>Site 1</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>F</td>
+                    <td>Engineering</td>
+                    <td>Online</td>
+                    <td>Site 1</td>
+                </tr>
+                <tr>
+                    <td>201</td>
+                    <td>F</td>
+                    <td>Engineering</td>
+                    <td>On Leave</td>
+                    <td>Site 2</td>
+                </tr>
+                <tr>
+                    <td>202</td>
+                    <td>F</td>
+                    <td>Engineering</td>
+                    <td>Online</td>
+                    <td>Site 2</td>
+                </tr>
+                <tr>
+                    <td>203</td>
+                    <td>M</td>
+                    <td>Engineering</td>
+                    <td>Online</td>
+                    <td>Site 2</td>
+                </tr>
+                <tr>
+                    <td>204</td>
+                    <td>M</td>
+                    <td>Design</td>
+                    <td>Online</td>
+                    <td>Site 2</td>
+                </tr>
+                <tr>
+                    <td>301</td>
+                    <td>F</td>
+                    <td>Support</td>
+                    <td>Online</td>
+                    <td>Site 3</td>
+                </tr>
+                <tr>
+                    <td>302</td>
+                    <td>F</td>
+                    <td>Support</td>
+                    <td>Online</td>
+                    <td>Site 3</td>
+                </tr>
+                <tr>
+                    <td>303</td>
+                    <td>M</td>
+                    <td>Support</td>
+                    <td>Terminated</td>
+                    <td>Site 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
