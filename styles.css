@@ -1,5 +1,7 @@
-/* Ümumi Stillər */
-:root {
+/* ============================================
+   ÜMUMİ STILLƏR
+   ============================================ */
+   :root {
     --primary-color: #007bff;
     --secondary-color: #6c757d;
     --accent-color: #ffc107;
@@ -7,6 +9,7 @@
     --light-bg: #f8f9fa;
     --dark-bg: #343a40;
 }
+
 body {
     font-family: 'Roboto', 'Helvetica Neue', sans-serif;
     color: var(--text-color);
@@ -16,7 +19,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-/* Navbar Stilləri */
+
+/* ============================================
+   NAVBAR STILLƏRİ
+   ============================================ */
 .navbar-nav .nav-link {
     font-size: 1.2rem;
     color: var(--text-color);
@@ -29,24 +35,25 @@ body {
 }
 
 .navbar-brand img {
-    max-height: 60px;
-    vertical-align: middle;
-    border-radius: 50%;
-    margin-right: 0.5rem;
+    max-height: 100%; /* Şəkilin hündürlüyü uyğunlaşdırılır */
+    width: auto; /* Orijinal eni qorunur */
+    border-radius: 0; /* Oval formasını aradan qaldırır */
 }
 
-/* Add a shadow to the navbar on scroll */
 .navbar {
-    box-shadow: none;
+    box-shadow: none; /* Kölgə effekti yoxdur */
 }
 
 .navbar.scrolled {
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Scroll zamanı kölgə effekti əlavə edilir */
 }
 
-/* Hero Bölməsi */
+/* ============================================
+   HERO BÖLMƏSİ
+   ============================================ */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(142, 85, 5, 0.6)), url('/images/hero.jpg') no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(142, 85, 5, 0.6)), 
+                url('/images/hero2.jpg') no-repeat center top;
     background-size: cover;
     height: 70vh;
     color: white;
@@ -56,10 +63,15 @@ body {
     padding-top: 20px;
 }
 
+.hero-section img {
+    border-radius: 10px; /* Şəkil künclərinə yumşaqlıq əlavə edilir */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Şəkilə kölgə effekti əlavə edilir */
+}
+
 .hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); /* Mətnə kölgə əlavə edilir */
 }
 
 .hero-section p {
@@ -69,7 +81,9 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Əsas Bölmələr */
+/* ============================================
+   ƏSAS BÖLMƏLƏR
+   ============================================ */
 #esas-bolmeler {
     padding: 40px 0;
 }
@@ -79,45 +93,52 @@ body {
 }
 
 #esas-bolmeler .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    transform: translateY(-5px); /* Hover zamanı yuxarı qalxır */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Kölgə effekti əlavə edilir */
 }
 
-/* Xəbərlər və Elanlar */
+/* ============================================
+   XƏBƏRLƏR VƏ ELANLAR
+   ============================================ */
 #xeberler-elanlar {
     background-color: var(--light-bg);
     padding: 40px 0;
 }
 
 #xeberler-elanlar .card {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Kartlar arasında boşluq */
 }
 
-/* Haqqımızda */
+/* ============================================
+   HAQQIMIZDA
+   ============================================ */
 #haqqimizda {
     padding: 40px 0;
     background-color: var(--light-bg);
 }
 
 #haqqimizda .fas {
-    color: var(--primary-color);
+    color: var(--primary-color); /* İkonlara əsas rəng tətbiq edilir */
 }
 
 #haqqimizda p {
-    text-align: justify;
+    text-align: justify; /* Mətn sol və sağ düzləndirilir */
 }
 
-/* Əlaqə Formu */
+/* ============================================
+   ƏLAQƏ FORMU
+   ============================================ */
 #elaqe form {
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    /* Add a slight gradient to the form to make it more visually appealing */
-    background: linear-gradient(to bottom, #fff 0%, #f5f5f5 100%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Formaya kölgə effekti əlavə edilir */
+    background: linear-gradient(to bottom, #fff 0%, #f5f5f5 100%); /* Yüngül gradient fon */
 }
 
-/* Footer */
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
     background-color: var(--dark-bg);
     color: #fff;
@@ -125,53 +146,41 @@ footer {
 }
 
 footer a {
-    color: inherit;
-    text-decoration: none;
+    color: inherit; /* Default rəng */
+    text-decoration: none; /* Alt xətt yoxdur */
 }
 
 footer a:hover {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Hover zamanı vurğulama rəngi */
 }
 
-/* Responsivlik */
+/* ============================================
+   RESPONSİVLİK
+   ============================================ */
 @media (max-width: 768px) {
     .hero-section h1 {
-        background-position: center 30%;
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Kiçik ekranlar üçün başlıq ölçüsü */
     }
     
     #esas-bolmeler .card {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Kartlar arasında daha böyük boşluq */
     }
     
     #haqqimizda p {
-        text-align: left;
-    }
-    
-    #xeberler-elanlar .card {
-        margin-bottom: 10px;
-    }
-    
-    #xeberler-elanlar .card-body {
-        padding: 10px;
+        text-align: left; /* Justify əvəzinə sola düzləndirilir */
     }
 }
 
 @media (max-width: 576px) {
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Daha kiçik ekranlar üçün başlıq ölçüsü */
     }
     
     #esas-bolmeler .card {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Kartlar arasında daha az boşluq */
     }
     
     #haqqimizda p {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Mətn ölçüsü kiçildilir */
     }
 }
-
-
-
-
-
